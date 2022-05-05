@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="642.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="artsishevskiy.cryptmethods.lab1.KeyController">
+   <children>
+      <Text fill="WHITE" layoutX="31.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Владелец ключа:" wrappingWidth="192.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <TextField fx:id="text_author_name" layoutX="31.0" layoutY="138.0" prefHeight="32.0" prefWidth="277.0" />
+      <Button fx:id="Button_ChooseUser" layoutX="308.0" layoutY="53.0" mnemonicParsing="false" onAction="#OnAction_Button_ChooseUser" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: orange;" text="Выбрать пользователя" />
+      <TextField fx:id="text_user_name" layoutX="31.0" layoutY="53.0" prefHeight="32.0" prefWidth="277.0" />
+      <Text fill="WHITE" layoutX="31.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя пользователя:" wrappingWidth="213.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="Button_BrowseKeyImport" layoutX="519.0" layoutY="264.0" mnemonicParsing="false" onAction="#OnAction_Button_BrowseKeyImport" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: orange;" text="Обзор" />
+      <Text fill="WHITE" layoutX="242.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ключ" wrappingWidth="55.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="text_keyImport" layoutX="242.0" layoutY="264.0" prefHeight="32.0" prefWidth="277.0" />
+      <Button fx:id="Button_Import" layoutX="35.0" layoutY="264.0" mnemonicParsing="false" onAction="#OnAction_Button_Import" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: orange;" text="Импорт ключа" />
+      <Button fx:id="Button_Export" layoutX="35.0" layoutY="400.0" mnemonicParsing="false" onAction="#OnAction_Button_Export" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: orange;" text="Экспорт ключа" />
+      <TextField fx:id="text_keyExport" layoutX="242.0" layoutY="400.0" prefHeight="32.0" prefWidth="277.0" />
+      <Text fill="WHITE" layoutX="242.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ключ" wrappingWidth="55.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="19.0" />
+         </font>
+      </Text>
+      <Button fx:id="Button_BrowseKeyExport" layoutX="519.0" layoutY="400.0" mnemonicParsing="false" onAction="#OnAction_Button_BrowseKeyExport" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: orange;" text="Обзор" />
+      <Button fx:id="Button_BrowsePath" layoutX="519.0" layoutY="485.0" mnemonicParsing="false" onAction="#OnAction_Button_BrowsePath" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: orange;" text="Обзор" />
+      <Text fill="WHITE" layoutX="242.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Папка" wrappingWidth="55.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="text_path" layoutX="242.0" layoutY="485.0" prefHeight="32.0" prefWidth="277.0" />
+      <Text fill="WHITE" layoutX="284.0" layoutY="218.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Импорт" wrappingWidth="97.0">
+         <font>
+            <Font name="Californian FB Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="284.0" layoutY="347.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Экспорт" wrappingWidth="97.0">
+         <font>
+            <Font name="Californian FB Bold" size="26.0" />
+         </font>
+      </Text>
+      <Button fx:id="Button_DeleteKeys" layoutX="244.0" layoutY="537.0" mnemonicParsing="false" onAction="#OnAction_Button_DeleteKeys" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: orange;" text="Удалить пару ключей" />
+      <Label fx:id="labelImport" layoutX="35.0" layoutY="296.0" prefHeight="21.0" prefWidth="575.0" />
+      <Label fx:id="labelExport" layoutX="34.0" layoutY="432.0" prefHeight="21.0" prefWidth="575.0" />
+      <Label fx:id="labelUser" layoutX="31.0" layoutY="85.0" prefHeight="21.0" prefWidth="599.0" />
+      <Button fx:id="Button_Close" layoutX="531.0" layoutY="553.0" mnemonicParsing="false" onAction="#OnAction_Button_Close" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: orange;" text="Выход" />
+      <Label fx:id="labelDelete" layoutX="35.0" layoutY="569.0" prefHeight="21.0" prefWidth="486.0" />
+      <Button fx:id="Button_Confirm" layoutX="35.0" layoutY="537.0" mnemonicParsing="false" onAction="#OnAction_Button_Confirm" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: orange;" text="Подтвердить удаление" />
+   </children>
+</AnchorPane>

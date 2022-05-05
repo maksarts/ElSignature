@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -12,7 +13,9 @@ import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
@@ -21,6 +24,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class FileController {
+
+    Stage keyStage;
 
     private UsersControl currentUsers;
     public void setUsers(UsersControl users) {
@@ -95,8 +100,18 @@ public class FileController {
     }
 
     @FXML
-    void OnAction_menuButtonKeys(ActionEvent event) {
+    void OnAction_menuButtonKeys(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("key.fxml"));
 
+        Scene scene = new Scene(fxmlLoader.load(), 642, 601);
+        keyStage = new Stage();
+        keyStage.setTitle("Работа с ключами");
+        keyStage.setScene(scene);
+        keyStage.show();
+
+        UsersControl curUsers = new UsersControl(keyStage);
+        KeyController keyController = fxmlLoader.getController();
+        keyController.setUsers(curUsers);
     }
 
     @FXML
