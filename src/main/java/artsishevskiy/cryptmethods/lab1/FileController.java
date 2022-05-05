@@ -26,6 +26,7 @@ import javafx.stage.Stage;
 public class FileController {
 
     Stage keyStage;
+    Stage aboutStage;
 
     private UsersControl currentUsers;
     public void setUsers(UsersControl users) {
@@ -37,9 +38,6 @@ public class FileController {
 
     @FXML
     private URL location;
-
-    @FXML
-    private MenuItem menuButtonMain;
 
     @FXML
     private MenuItem menuButtonKeys;
@@ -90,11 +88,6 @@ public class FileController {
     private Label labelErrorLoad;
 
     @FXML
-    void OnAction_menuButtonMain(ActionEvent event) {
-
-    }
-
-    @FXML
     void OnAction_menuButtonExit(ActionEvent event) {
         System.exit(0);
     }
@@ -115,8 +108,14 @@ public class FileController {
     }
 
     @FXML
-    void OnAction_menuButtonAbout(ActionEvent event) {
+    void OnAction_menuButtonAbout(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("about.fxml"));
 
+        Scene scene = new Scene(fxmlLoader.load(), 600, 446);
+        keyStage = new Stage();
+        keyStage.setTitle("О программе");
+        keyStage.setScene(scene);
+        keyStage.show();
     }
 
     @FXML
@@ -397,7 +396,6 @@ public class FileController {
         text_document.setDisable(true);
         Button_DownloadDoc.setDisable(true);
 
-        assert menuButtonMain != null : "fx:id=\"menuButtonMain\" was not injected: check your FXML file 'file.fxml'.";
         assert menuButtonKeys != null : "fx:id=\"menuButtonKeys\" was not injected: check your FXML file 'file.fxml'.";
         assert text_author_name != null : "fx:id=\"text_author_name\" was not injected: check your FXML file 'file.fxml'.";
         assert menuButtonExit != null : "fx:id=\"menuButtonExit\" was not injected: check your FXML file 'file.fxml'.";

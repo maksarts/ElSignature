@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="artsishevskiy.cryptmethods.lab1.AboutController">
+   <children>
+      <Text fill="WHITE" layoutX="154.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Лабораторная работа 1" wrappingWidth="292.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="25.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выполнил: Арцишевский Максим" wrappingWidth="379.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="25.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Группа: А-13-18" wrappingWidth="379.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="25.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вариант: 26" wrappingWidth="379.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="25.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Алгоритм хеширования документа:" wrappingWidth="379.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="25.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Алгоритм подписи документа:" wrappingWidth="319.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="25.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Алгоритм подписи ключа:" wrappingWidth="277.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="25.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Алгоритм хеширования ключа:" wrappingWidth="328.6044921875">
+         <font>
+            <Font name="Californian FB Bold" size="23.0" />
+         </font>
+      </Text>
+      <TextField editable="false" layoutX="397.0" layoutY="195.0" prefHeight="27.0" prefWidth="165.0" text="RIPEMD" />
+      <TextField editable="false" layoutX="397.0" layoutY="306.0" prefHeight="27.0" prefWidth="165.0" text="RIPEMD" />
+      <TextField editable="false" layoutX="397.0" layoutY="236.0" prefHeight="27.0" prefWidth="165.0" text="ECDSA" />
+      <TextField editable="false" layoutX="397.0" layoutY="344.0" prefHeight="27.0" prefWidth="165.0" text="ECDSA" />
+      <Button fx:id="Button_Close" layoutX="252.0" layoutY="396.0" mnemonicParsing="false" onAction="#OnAction_Button_Close" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: orange;" text="OK" />
+   </children>
+</AnchorPane>

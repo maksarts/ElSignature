@@ -21,7 +21,6 @@
         <menus>
           <Menu mnemonicParsing="false" text="Файл">
             <items>
-              <MenuItem fx:id="menuButtonMain" mnemonicParsing="false" onAction="#OnAction_menuButtonMain" text="Главная" />
                   <MenuItem fx:id="menuButtonExit" mnemonicParsing="false" onAction="#OnAction_menuButtonExit" text="Выход" />
             </items>
           </Menu>

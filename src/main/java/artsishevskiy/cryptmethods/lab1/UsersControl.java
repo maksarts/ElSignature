@@ -38,53 +38,6 @@ public class UsersControl {
         System.exit(0);
     }
 
-//    public void openMainPage() {
-//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("file-page.fxml"));
-//
-//        try {
-//            Scene scene = new Scene(fxmlLoader.load());
-//            mainStage.setTitle("Сохранение и загрузка подписанных документов");
-//            mainStage.setScene(scene);
-//            mainStage.show();
-//
-//            FileController fileController = fxmlLoader.getController();
-//            fileController.setMenu(this);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public void openKeysPage() {
-//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("key-page.fxml"));
-//
-//        try {
-//            Scene scene = new Scene(fxmlLoader.load());
-//            mainStage.setTitle("Импорт и экспорт ключей");
-//            mainStage.setScene(scene);
-//            mainStage.show();
-//
-//            KeyController keyController = fxmlLoader.getController();
-//            keyController.setMenu(this);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public void  openAbout() {
-//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("about.fxml"));
-//
-//        try {
-//            Scene scene = new Scene(fxmlLoader.load());
-//            Stage stage = new Stage();
-//
-//            stage.setTitle("О программе");
-//            stage.setScene(scene);
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     /* signing doc */
     private PrivateKey prKey;
     private PublicKey puKey;
@@ -100,9 +53,11 @@ public class UsersControl {
             prKey = pair.getPrivate();
             puKey = pair.getPublic();
 
+            // для подписи ключей
             createKeyDoc(puKey.getEncoded(), username, "pubEC", prKey);
             createKeyDoc(prKey.getEncoded(), username, "prkEC", prKey);
 
+            // для подписи документа
             createKeyDoc(puKey.getEncoded(), username, "pub", prKey);
             createKeyDoc(prKey.getEncoded(), username, "prk", prKey);
 
@@ -367,7 +322,6 @@ public class UsersControl {
             String userPath = "users/".concat(username).concat("/");
             byte[] data = text.getBytes(StandardCharsets.UTF_8);
 
-            //TODO: прописать правильную подпись
             Signature signature = Signature.getInstance(algorithmSign);
             signature.initSign(privateKey);
             signature.update(data);
