@@ -18,10 +18,6 @@ import java.util.Objects;
 
 public class UsersControl {
     private Stage mainStage;
-//    private final String algorithmKey = "RSA";
-//    private final String algorithmDoc = "SHA512withRSA";
-//    private final String algorithmKeyP = "EC";
-//    private final String algorithmDocP = "SHA256withECDSA";
 
     private final String algorithmHash = "EC";
     private final String algorithmSign = "RipeMD160WithECDSA";
