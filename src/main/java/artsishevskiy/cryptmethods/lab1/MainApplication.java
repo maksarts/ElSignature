@@ -16,6 +16,10 @@ public class MainApplication extends Application {
         stage.setTitle("Работа с подписанными документами");
         stage.setScene(scene);
         stage.show();
+
+        UsersControl curUsers = new UsersControl(stage);
+        FileController fileController = fxmlLoader.getController();
+        fileController.setUsers(curUsers);
     }
 
     public static void main(String[] args) {

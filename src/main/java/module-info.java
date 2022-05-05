@@ -9,6 +9,7 @@ module artsishevskiy.cryptmethods.lab1 {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires org.bouncycastle.provider;
 
     opens artsishevskiy.cryptmethods.lab1 to javafx.fxml;
     exports artsishevskiy.cryptmethods.lab1;

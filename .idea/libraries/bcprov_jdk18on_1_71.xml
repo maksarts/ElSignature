@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="bcprov-jdk18on-1.71">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/plugins/BC_jar_files/bcprov-jdk18on-1.71.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/plugins/BC_jar_files/bctls-jdk18on-1.71.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/plugins/BC_jar_files/bcutil-jdk18on-1.71.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
